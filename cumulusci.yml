@@ -23,3 +23,14 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
+flows:
+    dependencies:
+        steps:
+            3:
+                task: assign_permission_set_licenses
+                options:
+                    api_names: SurveyCreatorPsl
+            4:
+                task: assign_permission_sets
+                options:
+                    api_names: SurveyCreator,X00ex00000018ozh_128_09_04_12_1
